@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario de Solicitud de Devolución</title>
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="form-container">
+        <form id="myForm" onsubmit="openModal(event)">
+            <div class="form-row">
+                <div class="form-group">
+                    <label for="id">ID:</label>
+                    <input type="number" class="form-control" id="id" name="id" required>
+                </div>
+                <div class="form-group">
+                    <label for="requestDate">Fecha de solicitud:</label>
+                    <input type="date" class="form-control" id="requestDate" name="requestDate" required>
+                </div>
+                <div class="form-group">
+                    <label for="name">Nombre y Apellido:</label>
+                    <input type="text" class="form-control" id="name" name="name" required>
+                </div>
+            </div>
+            <div class="form-row">
+                <div class="form-group">
+                    <label for="service">Servicio:</label>
+                    <select class="form-control" id="service" name="service" required>
+                        <option value="" disabled selected>Seleccione una opción</option>
+                        <option>Excursión al Glaciar Perito Moreno</option>
+                        <option>Safari Nautico (Navegacion 1 hr en Gl. Perito Moreno)</option>
+                        <option>Ticket - Glaciares Gourmet Classic - sin Boxlunch -</option>
+                        <option>Ticket - Glaciares Gourmet Classic - con Boxlunch -</option>
+                        <option>Ticket - Glaciares Gourmet Premium</option>
+                        <option>Traslado - Puerto "La Soledad"</option>
+                        <option>Desembarco en el Glaciar Perito Moreno</option>
+                        <option>Minitrekking sin traslado</option>
+                        <option>Minitrekking 2 sin traslado</option>
+                        <option>Traslado Minitrekking</option>
+                        <option>Traslado Minitrekking 2</option>
+                        <option>Big Ice sin traslados</option>
+                        <option>Traslado Big Ice</option>
+                        <option>Safari Azul sin traslado</option>
+                        <option>Traslado Safari Azul</option>
+                        <option>Kayak Experience AM o PM</option>
+                        <option>Traslado Kayak Experience</option>
+                        <option>Traslado Kayak Experience con Vianda</option>
+                        <option>Mayo Spirit Trek sin traslados al puerto</option>
+                        <option>Traslado Puerto Bandera - Mayo Spirit Trek</option>
+                        <option>Balcones de Calafate AM o PM</option>
+                        <option>Balcones con Quads - AM o PM</option>
+                        <option>Balcones con Motos de Nieve - AM y PM</option>
+                        <option>City Tour ADT - CHD</option>
+                        <option>City Tour para Jubilado</option>
+                        <option>Excursión Bosque Petrificado con traslados</option>
+                        <option>Torres del Paine Full Day</option>
+                        <option>Tarde de Campo - sin cena - con traslados</option>
+                        <option>Tarde de Campo - con cena - con traslados</option>
+                        <option>Cena Show - con traslados</option>
+                        <option>Adicional - Iniciacion a la Cabalgata</option>
+                        <option>Dia de Campo - sin transfer -</option>
+                        <option>Dia de Campo - con transfer -</option>
+                        <option>Cabalgata Cristales 3 HS - sin transfer -</option>
+                        <option>Dia de Campo & Cabalgata Cristales - sin transfer -</option>
+                        <option>Dia de Campo & Cabalgata Cristales - con transfer -</option>
+                        <option>Adicional - Asado Patagónico</option>
+                        <option>Adicional - Cabalgata 45' (Dia de campo)</option>
+                        <option>EC Trekking con almuerzo (Dólar MEP)</option>
+                        <option>EC Discovery con almuerzo (Dólar MEP)</option>
+                        <option>EC Cabalgata con almuerzo (Dólar MEP)</option>
+                        <option>EC Classic con almuerzo (Dólar MEP)</option>
+                        <option>Traslado Puerto - Estancia Cristina (Dólar MEP)</option>
+                        <option>Todo Glaciares - Clasico o Sunset - Sólo Ticket</option>
+                        <option>Traslado a Puerto - Punta Banderas</option>
+                        <option>Adicional - Captain's Club</option>
+                        <option>Menu Refugio</option>
+                        <option>Tour Alternativo al Glaciar Perito Moreno con traslados</option>
+                        <option>Transfer IN</option>
+                        <option>Transfer OUT</option>
+                        <option>Chaltén Full Day con guía - Sin almuerzo</option>
+                        <option>Chaltén Full Day con guía - Con almuerzo</option>
+                        <option>Darwin Experience con traslados</option>
+                        <option>Acompañante Darwin Experience</option>
+                        <option>Safari Experience AM o PM</option>
+                        <option>Nativo Experience AM o PM</option>
+                        <option>Safari Bike Experience por la mañana con traslados</option>
+                        <option>Cañadón Experience AM con traslados</option>
+                        <option>Cabalgata Experience</option>
+                        <option>Glaciar Sur Pioneros con traslados (Dólar MEP)</option>
+                        <option>Glaciar Sur Aventura con traslados (Dólar MEP)</option>
+                        <option>Laguna de Los Tres desde FTE con vianda</option>
+                        <option>Laguna Torre desde FTE con vianda</option>
+                        <option>Laguna Capri desde FTE con vianda</option>
+                        <option>Laguna de Los Tres desde FTE sin vianda</option>
+                        <option>Laguna Torre desde FTE sin vianda</option>
+                        <option>Laguna Capri desde FTE sin vianda</option>
+                        <option>Tirolesa 08:30</option>
+                        <option>Tirolesa 14:00</option>
+                        <option>4x4 08:30</option>
+                        <option>4x4 14:00</option>
+                        <option>4x4 18:30</option>
+                        <option>Cabalgata 08:30</option>
+                        <option>Cabalgata 14:00</option>
+                        <option>Cabalgata 18:30</option>
+                        <option>Trekking 08:30</option>
+                        <option>Trekking 14:00</option>
+                        <option>Cerro Huyliche 4x4 y Trekking</option>
+                        <option>Cerro Huyliche 4x4 y Zipline</option>
+                        <option>Cerro Huyliche Full 4x4</option>
+                        <option>Vianda - con bebidas -</option>
+                        <option>FTE / CHT o CHT / FTE - regular sin guia -</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="currency">Tipo de moneda:</label>
+                    <select class="form-control" id="currency" name="currency" required>
+                        <option value="" disabled selected>Seleccione una opción</option>
+                        <option>ARS</option>
+                        <option>USD</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="amount">Monto:</label>
+                    <input type="number" class="form-control" id="amount" name="amount" required>
+                </div>
+            </div>
+            <div class="form-row">
+                <div class="form-group">
+                    <label for="refundReason">Motivo de Devolución:</label>
+                    <select class="form-control" id="refundReason" name="refundReason" required>
+                        <option value="" disabled selected>Seleccione una opción</option>
+                        <option>Quiere pagar en oficina</option>
+                        <option>Pago doble</option>
+                        <option>No puede viajar</option>
+                        <option>Quiere cambiar de servicio</option>
+                        <option>Se canceló el tour</option>
+                        <option>Queja de los pasajeros</option>
+                        <option>Problemas de salud</option>
+                        <option>No hay disponibilidad</option>
+                        <option>Otros</option>
+                    </select>
+                    <input type="text" class="form-control mt-2" id="refundReasonOther" name="refundReasonOther" placeholder="Especifique si eligió 'Otros'">
+                </div>
+                <div class="form-group">
+                    <label for="refundDate">Fecha de devolución:</label>
+                    <input type="date" class="form-control" id="refundDate" name="refundDate">
+                </div>
+                <div class="form-group">
+                    <label for="tripName">Trip Name:</label>
+                    <input type="text" class="form-control" id="tripName" name="tripName">
+                </div>
+            </div>
+            <div class="form-row">
+                <div class="form-group">
+                    <label for="requester">Solicita:</label>
+                    <select class="form-control" id="requester" name="requester" required>
+                        <option value="" disabled selected>Seleccione una opción</option>
+                        <option>Sofia Paz</option>
+                        <option>Juliana Montalvan</option>
+                        <option>Agustina</option>
+                        <option>Federico Bootz</option>
+                        <option>Daniela Ocón</option>
+                        <option>Sofia Ortiz</option>
+                        <option>Gabriel Ruscio</option>
+                        <option>Lautaro Marino</option>
+                        <option>Giuliana</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="returner">Devuelve:</label>
+                    <input type="text" class="form-control" id="returner" name="returner">
+                </div>
+                <div class="form-group">
+                    <label for="comments">Comentario:</label>
+                    <input type="text" class="form-control" id="comments" name="comments">
+                </div>
+            </div>
+            <div class="form-row">
+                <div class="form-group">
+                    <label for="paymentMethod">Medio de cobro:</label>
+                    <select class="form-control" id="paymentMethod" name="paymentMethod" required>
+                        <option value="" disabled selected>Seleccione una opción</option>
+                        <option>We Travel</option>
+                        <option>Web Dreams</option>
+                        <option>Efectivo</option>
+                        <option>Transferencia</option>
+                        <option>Deposito</option>
+                        <option>PIX</option>
+                        <option>Link de Prisma</option>
+                        <option>Posnet de Prisma</option>
+                    </select>
+                </div>
+            </div>
+            <div class="form-row justify-content-center">
+                <button type="submit" class="btn btn-primary">Solicitar devolución</button>
+            </div>
+        </form>
+    </div>
+
+    <!-- Modal -->
+    <div class="modal fade" id="confirmationModal" tabindex="-1" aria-labelledby="confirmationModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="confirmationModalLabel">Confirmación</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <p>Ey! Recorda que siempre antes de pedir una devolución tenemos que intentar ofrecerle otro servicio al pasajero o actividad, para evitarla! Si hiciste todo lo que pudiste y aun asi el pax quiere la devolución aceptá! 😎</p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancelar</button>
+                    <button type="button" class="btn btn-primary" id="confirmSubmit">Aceptar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="scripts.js"></script>
+</body>
+</html>
